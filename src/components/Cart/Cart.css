@@ -1,0 +1,10 @@
+.cart {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  /* align-items: center; */
+}
+.order-total-text {
+  color: #b12704;
+}

@@ -8,5 +8,12 @@
   margin-right: 5px;
   margin-left: 50px;
 }
-.cart-container {
+.search-container {
+  background-color: rgba(0, 0, 0, 0.85);
+  line-height: 50px;
+  text-align: center;
+}
+.search-container input {
+  width: 50%;
+  height: 30px;
 }

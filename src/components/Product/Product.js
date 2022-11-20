@@ -1,30 +1,36 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import Rating from "react-rating";
 import "./Product.css";
 
 const Product = (props) => {
   //   console.log(props);
-  const { name, img, price, seller, stock } = props.product;
+  const { name, img, price, seller, stock, shipping, star } = props.product;
   const cartIcon = <FontAwesomeIcon icon={faShoppingCart} />;
+  const starSolid = <FontAwesomeIcon icon="fa-solid fa-star" />;
+
   return (
-    <div className="product">
-      <div>
+    <div className="single-pd-container">
+      <div className="single-pd-img">
         <img src={img} alt="" />
       </div>
-      <div>
-        <h4 className="product-name">{name}</h4>
-        <p>
-          <small>by: {seller}</small>
-        </p>
-        <p>Price: ${price}</p>
+      <div className="single-pd-description">
+        <h4>{name}</h4>
+        <p>by: {seller}</p>
+        <p>price: ${price}</p>
+        <p>shipping cost: ${shipping}</p>
         <p>only {stock} left in stock - order soon</p>
-        <button
-          onClick={() => props.handleAddToCart(props.product)}
-          className="btn-regular"
-        >
-          {cartIcon} add to cart
+        <Rating
+          readonly
+          initialRating={star}
+          emptySymbol="fa fa-star-o "
+          fullSymbol="fa fa-star "
+        />
+        <button onClick={() => props.handleAddToCart(props.product)}>
+          {" "}
+          {cartIcon}
+          add to cart{" "}
         </button>
       </div>
     </div>
