@@ -26,6 +26,7 @@ const Cart = (props) => {
       <p>Shipping and Handling: ${shipping.toFixed(2)}</p>
       <p>Estimated Tax: ${(total * 0.1).toFixed(2)}</p>
       <h4 className="order-total-text">Order Total: ${netTotal.toFixed(2)} </h4>
+      {props.children}
     </div>
   );
 };
