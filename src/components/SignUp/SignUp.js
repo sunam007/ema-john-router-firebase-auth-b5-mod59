@@ -8,24 +8,61 @@ const SignUp = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
 
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+  const handleConfirmPassword = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  const handleCreateUser = (e) => {
+    e.preventDefault();
+    if (password !== confirmPassword) {
+      setError("Password didn't match !!! Check Again.");
+      return;
+    }
+  };
+
   return (
     <div className="form-control">
       <div>
         <h2 className="form-title">Sign Up</h2>
-        <form>
+        <form onSubmit={handleCreateUser}>
           <div className="input-group">
             <label htmlFor="email">Email</label>
-            <input type="email" name="email" id="" required />
+            <input
+              onBlur={handleEmail}
+              type="email"
+              name="email"
+              id=""
+              required
+            />
           </div>
           <div className="input-group">
             <label htmlFor="password">Password</label>
-            <input type="password" name="password" id="" required />
+            <input
+              onBlur={handlePassword}
+              type="password"
+              name="password"
+              id=""
+              required
+            />
           </div>
           <div className="input-group">
             <label htmlFor="confirm-password">Confirm Password</label>
-            <input type="password" name="confirm-password" id="" required />
+            <input
+              onBlur={handleConfirmPassword}
+              type="password"
+              name="confirm-password"
+              id=""
+              required
+            />
           </div>
-          <input className="form-submit" type="submit" value="Login" />
+          <p style={{ color: "red" }}>{error}</p>
+          <input className="form-submit" type="submit" value="Sign Up" />
         </form>
         <p>
           Already have an account ?{" "}
