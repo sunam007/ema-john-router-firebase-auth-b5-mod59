@@ -1,0 +1,116 @@
+.form-control {
+  width: 500px;
+  /* height: 700px; */
+  background: #ffffff;
+  border: 1px solid #95a0a7;
+  border-radius: 8px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+.form-title {
+  font-size: 35px;
+  color: #2a414f;
+  font-weight: 400;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+.input-group label {
+  display: block;
+  font-size: 16px;
+  color: #2a414f;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  line-height: 20px;
+}
+.input-group input {
+  width: 415px;
+  height: 45px;
+  border: 1px solid #95a0a7;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.form-submit {
+  width: 415px;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 153, 0, 0.3);
+  font-size: 20px;
+  color: #0e161a;
+  cursor: pointer;
+}
+
+.form-submit:hover {
+  background-color: rgba(255, 153, 0, 0.6);
+}
+.form-link {
+  color: #ff9900d3;
+
+  text-decoration: none;
+}
+.form-link:hover {
+  color: #ff9900;
+}
+
+.form-control p {
+  text-align: center;
+}
+.divider {
+  /* minor cosmetics */
+  display: table;
+  /* font-size: 24px; */
+  text-align: center;
+  width: 75%; /* divider width */
+  margin: 40px auto; /* spacing above/below */
+}
+.divider span {
+  display: table-cell;
+  position: relative;
+}
+.divider span:first-child,
+.divider span:last-child {
+  width: 50%;
+  top: 13px; /* adjust vertical align */
+  -moz-background-size: 100% 2px; /* line width */
+  background-size: 100% 2px; /* line width */
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
+}
+.divider span:first-child {
+  /* color changes in here */
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    from(transparent),
+    to(rgb(221, 216, 216))
+  );
+  background-image: -webkit-linear-gradient(180deg, transparent, #000);
+  background-image: -moz-linear-gradient(180deg, transparent, #000);
+  background-image: -o-linear-gradient(180deg, transparent, #000);
+  background-image: linear-gradient(90deg, transparent, #000);
+}
+.divider span:nth-child(2) {
+  color: #000;
+  padding: 0px 10px;
+  width: auto;
+  white-space: nowrap;
+}
+.divider span:last-child {
+  /* color changes in here */
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    from(#000),
+    to(transparent)
+  );
+  background-image: -webkit-linear-gradient(180deg, #000, transparent);
+  background-image: -moz-linear-gradient(180deg, #000, transparent);
+  background-image: -o-linear-gradient(180deg, #000, transparent);
+  background-image: linear-gradient(90deg, #000, transparent);
+}
